@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/*variables*/
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);/*background, headings, buttons*/
+    --padding: 50px;
+}
+/*end varibles*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-gray);
+}
+
+.boxes {
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+}
+
+.box {
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.boxes .box:first-child {
+    background-color: var(--bright-orange);
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.boxes .box:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+
+.boxes .box:last-child {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.box img {
+    width: 64px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.box h1 {
+    text-transform: uppercase;
+    margin: 0 0 30px;
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.box p {
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    
+}
+
+.boxes .box:first-child a {
+    color: var(--bright-orange);
+}
+
+.boxes .box:nth-child(2) a {
+    color: var(--dark-cyan);
+}
+
+.boxes .box:last-child a {
+    color: var(--very-dark-cyan);
+}
+
+
+.box a {
+    text-decoration: none;
+    border-radius: 25px;
+    text-align: center;
+    padding: 15px;
+    max-width: 155px;
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 55px;
+    border: 2px solid var(--very-light-gray);
+    transition: .3s;
+}
+
+.box a:hover {
+    color: var(--very-light-gray) !important;
+    background-color: transparent;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-top: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (max-width: 600px) {
+    .body {
+        padding: 20px;
+    }
+
+    .boxes .box:first-child {
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0;
+    }
+    
+    .boxes .box:nth-child(2) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+    }
+    
+    .boxes .box:last-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: inherit;
+        border-bottom-left-radius: inherit;
+    }
+}
+
+@media (min-width: 600px) {
+    .body {
+        padding: 50px;
+    }
+
+    .boxes .box:first-child {
+        border-top-right-radius: inherit;
+        border-bottom-left-radius: 0;
+    }
+    
+    .boxes .box:nth-child(2) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+    }
+    
+    .boxes .box:last-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: inherit;
+        border-bottom-left-radius: inherit;
+    }
+}
+
+@media (min-width:768px) {
+    .boxes .box:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .boxes .box:nth-child(2) {
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+    }
+    
+    .boxes .box:last-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: inherit;
+        border-bottom-left-radius: inherit;
+    }
+}
+
+
+
+@media (min-width:992px) {
+    .body {
+        padding: 25px;
+    }
+
+    .boxes .box:first-child {
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+    }
+    
+    .boxes .box:nth-child(2) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+    }
+    
+    .boxes .box:last-child {
+        border-top-right-radius: inherit;
+        border-bottom-right-radius: inherit;
+        border-bottom-left-radius: 0;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .body {
+        padding: 0;
+    }
+}
